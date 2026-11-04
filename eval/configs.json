@@ -1,0 +1,51 @@
+{
+  "terra-low": {
+    "label": "GPT-6.1 Terra, low",
+    "provider": "codex",
+    "model": "gpt-6.1-terra",
+    "options": {
+      "reasoningEffort": "low",
+      "serviceTier": "default"
+    },
+    "price": "gpt-6.1-terra"
+  },
+  "terra-low-priority": {
+    "label": "GPT-6.1 Terra, low, priority",
+    "provider": "codex",
+    "model": "gpt-6.1-terra",
+    "options": {
+      "reasoningEffort": "low",
+      "serviceTier": "priority"
+    },
+    "price": "gpt-6.1-terra",
+    "tier": "priority"
+  },
+  "haiku-low": {
+    "label": "Haiku 5.5, low",
+    "provider": "claudeAgent",
+    "model": "claude-haiku-5-5",
+    "options": {
+      "effort": "low"
+    },
+    "price": "claude-haiku-5-5"
+  },
+  "sonnet-low": {
+    "label": "Sonnet 5.5, low",
+    "provider": "claudeAgent",
+    "model": "claude-sonnet-5-5",
+    "options": {
+      "effort": "low"
+    },
+    "price": "claude-sonnet-5-5"
+  },
+  "opus-low": {
+    "label": "Opus 5.5, low",
+    "provider": "claudeAgent",
+    "model": "claude-opus-5-5",
+    "options": {
+      "effort": "low",
+      "fastMode": false
+    },
+    "price": "claude-opus-5-5"
+  }
+}
