@@ -1,0 +1,128 @@
+#!/usr/bin/env bash
+# Talk to Linear as the T3 agent app.
+#
+#   linear token                                  print a valid app access token
+#   linear gql <query> [variables-json]           run a GraphQL request, print .data
+#   linear activity <session> <type> <body|-> [--ephemeral]
+#                                                 post a thought/elicitation/response/error
+#   linear activity <session> action <action> <parameter> [result] [--ephemeral]
+#   linear install-url                            print the admin URL that installs the app as an agent
+#   linear install <callback-url|->               finish the install with the redirect URL (do it within minutes)
+#
+# Credentials come from $T3_LINEAR_CONFIG_DIR/env (default ~/.config/t3-linear-agent/env):
+#   LINEAR_CLIENT_ID=...
+#   LINEAR_CLIENT_SECRET=...
+#   LINEAR_SCOPE=read,write,app:assignable,app:mentionable   (optional, the default)
+set -euo pipefail
+
+CONFIG_DIR=${T3_LINEAR_CONFIG_DIR:-$HOME/.config/t3-linear-agent}
+CACHE_DIR=${T3_LINEAR_CACHE_DIR:-$HOME/.cache/t3-linear-agent}
+API=https://api.linear.app
+REDIRECT_URI=http://localhost:8765/callback
+SCOPE_DEFAULT=read,write,app:assignable,app:mentionable
+
+die() { echo "linear: $*" >&2; exit 1; }
+
+load_config() {
+  [[ -r $CONFIG_DIR/env ]] || die "missing $CONFIG_DIR/env (see docs/setup.md)"
+  # shellcheck disable=SC1091
+  source "$CONFIG_DIR/env"
+  [[ -n ${LINEAR_CLIENT_ID:-} && -n ${LINEAR_CLIENT_SECRET:-} ]] ||
+    die "LINEAR_CLIENT_ID and LINEAR_CLIENT_SECRET must be set in $CONFIG_DIR/env"
+}
+
+# Client credentials tokens last 30 days. Reuse the cached one until it has
+# less than an hour left. Concurrent mints are harmless; the rename keeps the
+# cache file whole.
+token() {
+  local cache=$CACHE_DIR/token.json now
+  now=$(date +%s)
+  if [[ -r $cache ]] && (( $(jq -r '.expires_at // 0' "$cache") > now + 3600 )); then
+    jq -r .access_token "$cache"
+    return
+  fi
+  load_config
+  local response
+  response=$(curl -sS --fail-with-body -u "$LINEAR_CLIENT_ID:$LINEAR_CLIENT_SECRET" \
+    -d grant_type=client_credentials -d "scope=${LINEAR_SCOPE:-$SCOPE_DEFAULT}" \
+    "$API/oauth/token") || die "token request failed: $response"
+  mkdir -p "$CACHE_DIR"
+  chmod 700 "$CACHE_DIR"
+  local tmp
+  tmp=$(mktemp "$CACHE_DIR/token.XXXXXX")
+  jq --argjson now "$now" '{access_token, expires_at: ($now + .expires_in)}' <<<"$response" >"$tmp"
+  mv "$tmp" "$cache"
+  jq -r .access_token "$cache"
+}
+
+gql() {
+  local query=$1 variables=${2:-'{}'} response
+  response=$(jq -n --arg query "$query" --argjson variables "$variables" \
+      '{$query, $variables}' |
+    curl -sS -H "Authorization: Bearer $(token)" -H 'Content-Type: application/json' \
+      --data @- "$API/graphql") || die "request failed"
+  if jq -e '.errors' <<<"$response" >/dev/null; then
+    jq '.errors' <<<"$response" >&2
+    exit 1
+  fi
+  jq '.data' <<<"$response"
+}
+
+activity() {
+  local session=${1:?session id} type=${2:?activity type} ephemeral=false
+  shift 2
+  local args=()
+  for arg in "$@"; do
+    if [[ $arg == --ephemeral ]]; then ephemeral=true; else args+=("$arg"); fi
+  done
+
+  local content
+  if [[ $type == action ]]; then
+    content=$(jq -n --arg action "${args[0]:?action}" --arg parameter "${args[1]:?parameter}" \
+      --arg result "${args[2]:-}" \
+      '{type: "action", $action, $parameter} + (if $result == "" then {} else {$result} end)')
+  else
+    local body=${args[0]:?body, or - for stdin}
+    [[ $body == - ]] && body=$(cat)
+    content=$(jq -n --arg type "$type" --arg body "$body" '{$type, $body}')
+  fi
+
+  # shellcheck disable=SC2016 # GraphQL variables, not shell
+  gql 'mutation($input: AgentActivityCreateInput!) { agentActivityCreate(input: $input) { success } }' \
+    "$(jq -n --arg session "$session" --argjson content "$content" --argjson ephemeral "$ephemeral" \
+      '{input: ({agentSessionId: $session, $content} + (if $ephemeral then {ephemeral: true} else {} end))}')"
+}
+
+# Installing as an agent is an OAuth authorization-code flow with actor=app.
+# Nothing listens on the redirect URI; the admin copies the failed page's URL
+# back, and the code in it must be exchanged before it expires.
+install_url() {
+  load_config
+  printf 'https://linear.app/oauth/authorize?%s\n' "$(jq -rn --arg id "$LINEAR_CLIENT_ID" \
+    --arg redirect "$REDIRECT_URI" --arg scope "${LINEAR_SCOPE:-$SCOPE_DEFAULT}" \
+    '{client_id: $id, redirect_uri: $redirect, response_type: "code", scope: $scope,
+      actor: "app", prompt: "consent", state: "install"} | to_entries
+      | map("\(.key)=\(.value | @uri)") | join("&")')"
+}
+
+install() {
+  load_config
+  local url=${1:?callback URL, or - for stdin} code response
+  [[ $url == - ]] && url=$(cat)
+  code=$(sed -nE 's/.*[?&]code=([^&]+).*/\1/p' <<<"$url")
+  [[ -n $code ]] || die "no code= in that URL"
+  response=$(curl -sS "$API/oauth/token" -d grant_type=authorization_code \
+    --data-urlencode "code=$code" --data-urlencode "redirect_uri=$REDIRECT_URI" \
+    --data-urlencode "client_id=$LINEAR_CLIENT_ID" --data-urlencode "client_secret=$LINEAR_CLIENT_SECRET")
+  jq -e .access_token <<<"$response" >/dev/null || die "install failed: $(jq -c '{error, error_description}' <<<"$response")"
+  echo "installed with scopes: $(jq -r .scope <<<"$response")"
+}
+
+case ${1:-} in
+  token) token ;;
+  gql) shift; gql "$@" ;;
+  activity) shift; activity "$@" ;;
+  install-url) install_url ;;
+  install) shift; install "$@" ;;
+  *) sed -n '2,15p' "$0" >&2; exit 2 ;;
+esac

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Stands in for bin/t3-dispatch during a grader run: records the call and exits.
+dir=$(cd "$(dirname "$0")/.." && pwd)
+jq -cn --arg ts "$(date +%s%3N)" '{ts_ms: ($ts | tonumber), argv: $ARGS.positional}' \
+  --args "$@" >>"$dir/calls.jsonl"

@@ -1,0 +1,1279 @@
+{
+  "runs": [
+    {
+      "run": "r0-created-haiku-low",
+      "config": "haiku-low",
+      "scenario": "created",
+      "rep": 0,
+      "expected": [
+        "created",
+        "b3849fb6-f918-4d84-80e8-76c27f452c33"
+      ],
+      "label": "Haiku 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "created",
+          "b3849fb6-f918-4d84-80e8-76c27f452c33"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 333,
+      "model_ms": 5707,
+      "total_ms": 6040,
+      "cost_usd": 0.005989049999999999,
+      "usage": {
+        "input": 4,
+        "cache_write": 25686,
+        "cache_read": 70445,
+        "output": 294
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/529ae72a-394a-46a4-bffa-0835f35e2110.jsonl"
+    },
+    {
+      "run": "r0-created-opus-low",
+      "config": "opus-low",
+      "scenario": "created",
+      "rep": 0,
+      "expected": [
+        "created",
+        "292c9c4a-87bf-410e-8616-9b7b94a75a5b"
+      ],
+      "label": "Opus 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "created",
+          "292c9c4a-87bf-410e-8616-9b7b94a75a5b"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 314,
+      "model_ms": 7569,
+      "total_ms": 7883,
+      "cost_usd": 0.18609759999999997,
+      "usage": {
+        "input": 4,
+        "cache_write": 20822,
+        "cache_read": 73728,
+        "output": 238
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/f3402db2-6195-4b2e-848e-13a1be5a81d1.jsonl"
+    },
+    {
+      "run": "r0-created-sonnet-low",
+      "config": "sonnet-low",
+      "scenario": "created",
+      "rep": 0,
+      "expected": [
+        "created",
+        "19400110-e75a-46a4-a118-3b1cc1afa4ef"
+      ],
+      "label": "Sonnet 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "created",
+          "19400110-e75a-46a4-a118-3b1cc1afa4ef"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 325,
+      "model_ms": 5756,
+      "total_ms": 6081,
+      "cost_usd": 0.10821089999999998,
+      "usage": {
+        "input": 4,
+        "cache_write": 24845,
+        "cache_read": 69629,
+        "output": 186
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/11d922a0-1d3b-47eb-bae4-a9345ba9c7c8.jsonl"
+    },
+    {
+      "run": "r0-created-terra-low",
+      "config": "terra-low",
+      "scenario": "created",
+      "rep": 0,
+      "expected": [
+        "created",
+        "076a4e63-fc55-49d9-a17f-a2118976fae9"
+      ],
+      "label": "GPT-6.1 Terra, low",
+      "provider": "codex",
+      "calls": [
+        [
+          "created",
+          "076a4e63-fc55-49d9-a17f-a2118976fae9"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 1531,
+      "model_ms": 8118,
+      "total_ms": 9649,
+      "cost_usd": 0.0149092,
+      "usage": {
+        "input_tokens": 42094,
+        "cached_input_tokens": 29184,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 108,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 42202
+      },
+      "log": "/home/mez/.codex/sessions/2026/11/04/rollout-2026-11-04T01-37-06-01a1a433-e457-77c1-95f9-54b60705568b.jsonl"
+    },
+    {
+      "run": "r0-created-terra-low-priority",
+      "config": "terra-low-priority",
+      "scenario": "created",
+      "rep": 0,
+      "expected": [
+        "created",
+        "87ac2e98-7371-4e1d-9ce7-bb183f5d782e"
+      ],
+      "label": "GPT-6.1 Terra, low, priority",
+      "provider": "codex",
+      "calls": [
+        [
+          "created",
+          "87ac2e98-7371-4e1d-9ce7-bb183f5d782e"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 794,
+      "model_ms": 3680,
+      "total_ms": 4474,
+      "cost_usd": 0.0455084,
+      "usage": {
+        "input_tokens": 42125,
+        "cached_input_tokens": 20864,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 90,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 42215
+      },
+      "log": "/home/mez/.codex/sessions/2026/11/04/rollout-2026-11-04T01-37-09-01a1a433-ef81-7590-b624-99991f4b8e4d.jsonl"
+    },
+    {
+      "run": "r1-created-haiku-low",
+      "config": "haiku-low",
+      "scenario": "created",
+      "rep": 1,
+      "expected": [
+        "created",
+        "c48aa1f9-a420-45c4-8928-07389daff050",
+        "9e067239-1f23-43d5-a498-738e8dbae5b5"
+      ],
+      "label": "Haiku 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "created",
+          "c48aa1f9-a420-45c4-8928-07389daff050",
+          "9e067239-1f23-43d5-a498-738e8dbae5b5"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 326,
+      "model_ms": 5625,
+      "total_ms": 5951,
+      "cost_usd": 0.0050645199999999994,
+      "usage": {
+        "input": 4,
+        "cache_write": 20770,
+        "cache_read": 75462,
+        "output": 311
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/01295249-b945-4ab9-b7a9-bf04559169c8.jsonl"
+    },
+    {
+      "run": "r1-created-opus-low",
+      "config": "opus-low",
+      "scenario": "created",
+      "rep": 1,
+      "expected": [
+        "created",
+        "a510e46a-dad0-4f70-8c11-221fd6712f03",
+        "267a73bc-7ffc-47f7-91da-7e963de3d670"
+      ],
+      "label": "Opus 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "created",
+          "a510e46a-dad0-4f70-8c11-221fd6712f03",
+          "267a73bc-7ffc-47f7-91da-7e963de3d670"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 490,
+      "model_ms": 7280,
+      "total_ms": 7770,
+      "cost_usd": 0.187014,
+      "usage": {
+        "input": 4,
+        "cache_write": 20910,
+        "cache_read": 73790,
+        "output": 248
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/0d8a98ff-dec0-42c4-a424-cab07829dd59.jsonl"
+    },
+    {
+      "run": "r1-created-sonnet-low",
+      "config": "sonnet-low",
+      "scenario": "created",
+      "rep": 1,
+      "expected": [
+        "created",
+        "d1c19fe2-7909-4ce6-a3b1-e3ea1a53cf29",
+        "5ae897c9-24c2-46ce-bc54-8ad9cba76150"
+      ],
+      "label": "Sonnet 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "created",
+          "d1c19fe2-7909-4ce6-a3b1-e3ea1a53cf29",
+          "5ae897c9-24c2-46ce-bc54-8ad9cba76150"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 344,
+      "model_ms": 6147,
+      "total_ms": 6491,
+      "cost_usd": 0.09266619999999999,
+      "usage": {
+        "input": 4,
+        "cache_write": 20758,
+        "cache_read": 73862,
+        "output": 224
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/f593cf95-44b6-4981-b702-9eb358068b94.jsonl"
+    },
+    {
+      "run": "r1-created-terra-low",
+      "config": "terra-low",
+      "scenario": "created",
+      "rep": 1,
+      "expected": [
+        "created",
+        "b699bce2-2299-4531-b0f7-d91f7dafad70",
+        "1f605fbc-c441-49dd-a443-4208fea85ddd"
+      ],
+      "label": "GPT-6.1 Terra, low",
+      "provider": "codex",
+      "calls": [
+        [
+          "created",
+          "b699bce2-2299-4531-b0f7-d91f7dafad70",
+          "1f605fbc-c441-49dd-a443-4208fea85ddd"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 718,
+      "model_ms": 3887,
+      "total_ms": 4605,
+      "cost_usd": 0.015109199999999998,
+      "usage": {
+        "input_tokens": 42194,
+        "cached_input_tokens": 29184,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 128,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 42322
+      },
+      "log": "/home/mez/.codex/sessions/2026/11/04/rollout-2026-11-04T01-47-23-01a1a43d-4ccb-7dd0-9e20-840913617ea6.jsonl"
+    },
+    {
+      "run": "r1-created-terra-low-priority",
+      "config": "terra-low-priority",
+      "scenario": "created",
+      "rep": 1,
+      "expected": [
+        "created",
+        "160c1215-2110-44cc-8132-381b20a86b55",
+        "e0e8ee1c-5b75-4bc6-a73c-28d4244685cc"
+      ],
+      "label": "GPT-6.1 Terra, low, priority",
+      "provider": "codex",
+      "calls": [
+        [
+          "created",
+          "160c1215-2110-44cc-8132-381b20a86b55",
+          "e0e8ee1c-5b75-4bc6-a73c-28d4244685cc"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 525,
+      "model_ms": 2737,
+      "total_ms": 3262,
+      "cost_usd": 0.0130112,
+      "usage": {
+        "input_tokens": 42214,
+        "cached_input_tokens": 38272,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 130,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 42344
+      },
+      "log": "/home/mez/.codex/sessions/2026/11/04/rollout-2026-11-04T01-47-26-01a1a43d-5a71-71e0-8b57-3e735c0a8a35.jsonl"
+    },
+    {
+      "run": "r1-prompted-haiku-low",
+      "config": "haiku-low",
+      "scenario": "prompted",
+      "rep": 1,
+      "expected": [
+        "prompted",
+        "7867e3db-6d9a-4b1f-86af-7ef15ecd4b4b",
+        "ccb37e90-8cec-482a-9689-9b70535d97b5"
+      ],
+      "label": "Haiku 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "prompted",
+          "7867e3db-6d9a-4b1f-86af-7ef15ecd4b4b",
+          "ccb37e90-8cec-482a-9689-9b70535d97b5"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 297,
+      "model_ms": 5650,
+      "total_ms": 5947,
+      "cost_usd": 0.00506472,
+      "usage": {
+        "input": 4,
+        "cache_write": 20800,
+        "cache_read": 75482,
+        "output": 299
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/6effb4c1-7d65-4b15-96b6-a342365f674d.jsonl"
+    },
+    {
+      "run": "r1-prompted-opus-low",
+      "config": "opus-low",
+      "scenario": "prompted",
+      "rep": 1,
+      "expected": [
+        "prompted",
+        "70efc650-8dee-4c34-95b6-0b8c57bf6b62",
+        "0b07c01d-b0c4-4d23-b1dd-7b418c72d932"
+      ],
+      "label": "Opus 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "prompted",
+          "70efc650-8dee-4c34-95b6-0b8c57bf6b62",
+          "0b07c01d-b0c4-4d23-b1dd-7b418c72d932"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 389,
+      "model_ms": 9200,
+      "total_ms": 9589,
+      "cost_usd": 0.1879918,
+      "usage": {
+        "input": 4,
+        "cache_write": 20927,
+        "cache_read": 73799,
+        "output": 290
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/514b919f-172c-43f1-a6f8-14a9ddc2565c.jsonl"
+    },
+    {
+      "run": "r1-prompted-sonnet-low",
+      "config": "sonnet-low",
+      "scenario": "prompted",
+      "rep": 1,
+      "expected": [
+        "prompted",
+        "073028da-b5af-4a3a-80ce-ac19c0885e65",
+        "239d2872-4d7a-410d-9852-8e936a2bd79c"
+      ],
+      "label": "Sonnet 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "prompted",
+          "073028da-b5af-4a3a-80ce-ac19c0885e65",
+          "239d2872-4d7a-410d-9852-8e936a2bd79c"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 366,
+      "model_ms": 6379,
+      "total_ms": 6745,
+      "cost_usd": 0.09266049999999999,
+      "usage": {
+        "input": 4,
+        "cache_write": 20776,
+        "cache_read": 73885,
+        "output": 216
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/9fb470ee-0126-4885-b5dc-ed37080b61ad.jsonl"
+    },
+    {
+      "run": "r1-prompted-terra-low",
+      "config": "terra-low",
+      "scenario": "prompted",
+      "rep": 1,
+      "expected": [
+        "prompted",
+        "c6dfebb3-c28d-45f7-9de6-1173dbceec7e",
+        "9acae6b5-fa28-4ad2-be3c-f0e258f0f548"
+      ],
+      "label": "GPT-6.1 Terra, low",
+      "provider": "codex",
+      "calls": [
+        [
+          "prompted",
+          "c6dfebb3-c28d-45f7-9de6-1173dbceec7e",
+          "9acae6b5-fa28-4ad2-be3c-f0e258f0f548"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 567,
+      "model_ms": 4135,
+      "total_ms": 4702,
+      "cost_usd": 0.011163399999999999,
+      "usage": {
+        "input_tokens": 42226,
+        "cached_input_tokens": 33408,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 135,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 42361
+      },
+      "log": "/home/mez/.codex/sessions/2026/11/04/rollout-2026-11-04T01-48-09-01a1a43e-015d-7fe0-802a-f9feb06ebb22.jsonl"
+    },
+    {
+      "run": "r1-prompted-terra-low-priority",
+      "config": "terra-low-priority",
+      "scenario": "prompted",
+      "rep": 1,
+      "expected": [
+        "prompted",
+        "de312610-c4d1-49b8-b2b1-e0db5545137d",
+        "81f5bee8-f7d3-4e73-9c2b-1146e5a698e1"
+      ],
+      "label": "GPT-6.1 Terra, low, priority",
+      "provider": "codex",
+      "calls": [
+        [
+          "prompted",
+          "de312610-c4d1-49b8-b2b1-e0db5545137d",
+          "81f5bee8-f7d3-4e73-9c2b-1146e5a698e1"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 518,
+      "model_ms": 2397,
+      "total_ms": 2915,
+      "cost_usd": 0.046180399999999996,
+      "usage": {
+        "input_tokens": 42221,
+        "cached_input_tokens": 20864,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 138,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 42359
+      },
+      "log": "/home/mez/.codex/sessions/2026/11/04/rollout-2026-11-04T01-48-12-01a1a43e-0e7d-73b3-84e6-708c20c1a4f5.jsonl"
+    },
+    {
+      "run": "r2-created-haiku-low",
+      "config": "haiku-low",
+      "scenario": "created",
+      "rep": 2,
+      "expected": [
+        "created",
+        "d3acb98d-d2f7-49b0-a128-70ee99f07f31",
+        "ad3880ec-7c46-4514-808d-ca8172aa6c95"
+      ],
+      "label": "Haiku 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "created",
+          "d3acb98d-d2f7-49b0-a128-70ee99f07f31",
+          "ad3880ec-7c46-4514-808d-ca8172aa6c95"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 584,
+      "model_ms": 8372,
+      "total_ms": 8956,
+      "cost_usd": 0.005099139999999999,
+      "usage": {
+        "input": 4,
+        "cache_write": 20795,
+        "cache_read": 75974,
+        "output": 360
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/742207c0-45f0-4427-9428-0faa6408f981.jsonl"
+    },
+    {
+      "run": "r2-created-opus-low",
+      "config": "opus-low",
+      "scenario": "created",
+      "rep": 2,
+      "expected": [
+        "created",
+        "2a310ea7-f632-4737-9b4f-3954b529395a",
+        "3357f105-b3fb-4379-9214-30a306cd36f9"
+      ],
+      "label": "Opus 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "created",
+          "2a310ea7-f632-4737-9b4f-3954b529395a",
+          "3357f105-b3fb-4379-9214-30a306cd36f9"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 432,
+      "model_ms": 9840,
+      "total_ms": 10272,
+      "cost_usd": 0.18769619999999998,
+      "usage": {
+        "input": 4,
+        "cache_write": 20898,
+        "cache_read": 73781,
+        "output": 287
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/84980ba0-688a-4a84-bfc2-b24e58fae4a0.jsonl"
+    },
+    {
+      "run": "r2-created-sonnet-low",
+      "config": "sonnet-low",
+      "scenario": "created",
+      "rep": 2,
+      "expected": [
+        "created",
+        "0fd6f4ae-9533-43c7-9465-83ae7250e89b",
+        "532e04f3-2d8a-40ff-b50c-e63878471948"
+      ],
+      "label": "Sonnet 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "created",
+          "0fd6f4ae-9533-43c7-9465-83ae7250e89b",
+          "532e04f3-2d8a-40ff-b50c-e63878471948"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 485,
+      "model_ms": 5999,
+      "total_ms": 6484,
+      "cost_usd": 0.0925772,
+      "usage": {
+        "input": 4,
+        "cache_write": 20763,
+        "cache_read": 73872,
+        "output": 213
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/34cb8312-7a84-451b-9b64-a6428e422c17.jsonl"
+    },
+    {
+      "run": "r2-created-terra-low",
+      "config": "terra-low",
+      "scenario": "created",
+      "rep": 2,
+      "expected": [
+        "created",
+        "fde7d7cb-632f-4c6f-9503-fe3f0e85d75d",
+        "02f3bbbb-6c5a-4f89-ad8b-2a2f0e8c07e9"
+      ],
+      "label": "GPT-6.1 Terra, low",
+      "provider": "codex",
+      "calls": [
+        [
+          "created",
+          "fde7d7cb-632f-4c6f-9503-fe3f0e85d75d",
+          "02f3bbbb-6c5a-4f89-ad8b-2a2f0e8c07e9"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 629,
+      "model_ms": 5623,
+      "total_ms": 6252,
+      "cost_usd": 0.015263200000000001,
+      "usage": {
+        "input_tokens": 42283,
+        "cached_input_tokens": 29184,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 141,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 42424
+      },
+      "log": "/home/mez/.codex/sessions/2026/11/04/rollout-2026-11-04T01-48-46-01a1a43e-923f-7eb1-a0c9-514b22caa466.jsonl"
+    },
+    {
+      "run": "r2-created-terra-low-priority",
+      "config": "terra-low-priority",
+      "scenario": "created",
+      "rep": 2,
+      "expected": [
+        "created",
+        "13e2b8a6-7d87-4fb6-ab1b-5533db5e9828",
+        "6a1f591f-034c-4c5d-816b-e6653da87043"
+      ],
+      "label": "GPT-6.1 Terra, low, priority",
+      "provider": "codex",
+      "calls": [
+        [
+          "created",
+          "13e2b8a6-7d87-4fb6-ab1b-5533db5e9828",
+          "6a1f591f-034c-4c5d-816b-e6653da87043"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 490,
+      "model_ms": 2798,
+      "total_ms": 3288,
+      "cost_usd": 0.0461944,
+      "usage": {
+        "input_tokens": 42228,
+        "cached_input_tokens": 20864,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 138,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 42366
+      },
+      "log": "/home/mez/.codex/sessions/2026/11/04/rollout-2026-11-04T01-48-49-01a1a43e-9f1c-77f2-9755-6f693ce092b2.jsonl"
+    },
+    {
+      "run": "r2-prompted-haiku-low",
+      "config": "haiku-low",
+      "scenario": "prompted",
+      "rep": 2,
+      "expected": [
+        "prompted",
+        "da79b87a-fdd4-48b6-9e42-f6db35b53a09",
+        "10dfc299-2e1e-40c7-9061-186035846d98"
+      ],
+      "label": "Haiku 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "prompted",
+          "da79b87a-fdd4-48b6-9e42-f6db35b53a09",
+          "10dfc299-2e1e-40c7-9061-186035846d98"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 388,
+      "model_ms": 6683,
+      "total_ms": 7071,
+      "cost_usd": 0.00507741,
+      "usage": {
+        "input": 4,
+        "cache_write": 20784,
+        "cache_read": 75471,
+        "output": 331
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/7d08ad67-3b9f-46ea-ae1e-276884ce139c.jsonl"
+    },
+    {
+      "run": "r2-prompted-opus-low",
+      "config": "opus-low",
+      "scenario": "prompted",
+      "rep": 2,
+      "expected": [
+        "prompted",
+        "17f4079a-be14-480c-b76e-9a363c108b09",
+        "11fa87e9-5979-4e1b-8091-6f87758520dd"
+      ],
+      "label": "Opus 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "prompted",
+          "17f4079a-be14-480c-b76e-9a363c108b09",
+          "11fa87e9-5979-4e1b-8091-6f87758520dd"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 356,
+      "model_ms": 7604,
+      "total_ms": 7960,
+      "cost_usd": 0.1867132,
+      "usage": {
+        "input": 4,
+        "cache_write": 20892,
+        "cache_read": 74406,
+        "output": 234
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/49f24419-9de4-4763-8922-c18623f42b8d.jsonl"
+    },
+    {
+      "run": "r2-prompted-sonnet-low",
+      "config": "sonnet-low",
+      "scenario": "prompted",
+      "rep": 2,
+      "expected": [
+        "prompted",
+        "2aaeacc2-83af-4bc8-b5c1-26ff2978459a",
+        "6fcd9ca7-f4ba-450c-83f0-7a87ee00ae40"
+      ],
+      "label": "Sonnet 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "prompted",
+          "2aaeacc2-83af-4bc8-b5c1-26ff2978459a",
+          "6fcd9ca7-f4ba-450c-83f0-7a87ee00ae40"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 356,
+      "model_ms": 6313,
+      "total_ms": 6669,
+      "cost_usd": 0.09262179999999999,
+      "usage": {
+        "input": 4,
+        "cache_write": 20757,
+        "cache_read": 73858,
+        "output": 220
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/ea300981-1305-4340-8c7a-4d76196d138c.jsonl"
+    },
+    {
+      "run": "r2-prompted-terra-low",
+      "config": "terra-low",
+      "scenario": "prompted",
+      "rep": 2,
+      "expected": [
+        "prompted",
+        "ff07b269-238d-4418-bcc1-539648de2ef3",
+        "b2c9b846-4497-4821-b039-44450ffda127"
+      ],
+      "label": "GPT-6.1 Terra, low",
+      "provider": "codex",
+      "calls": [
+        [
+          "prompted",
+          "ff07b269-238d-4418-bcc1-539648de2ef3",
+          "b2c9b846-4497-4821-b039-44450ffda127"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 608,
+      "model_ms": 4610,
+      "total_ms": 5218,
+      "cost_usd": 0.0151332,
+      "usage": {
+        "input_tokens": 42203,
+        "cached_input_tokens": 29184,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 131,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 42334
+      },
+      "log": "/home/mez/.codex/sessions/2026/11/04/rollout-2026-11-04T01-49-28-01a1a43f-367d-7111-92f7-6a55ef85924c.jsonl"
+    },
+    {
+      "run": "r2-prompted-terra-low-priority",
+      "config": "terra-low-priority",
+      "scenario": "prompted",
+      "rep": 2,
+      "expected": [
+        "prompted",
+        "a25db0cd-abe4-4181-afae-a95997c4e425",
+        "113052fc-b48a-41a5-a264-bd4894f416a4"
+      ],
+      "label": "GPT-6.1 Terra, low, priority",
+      "provider": "codex",
+      "calls": [
+        [
+          "prompted",
+          "a25db0cd-abe4-4181-afae-a95997c4e425",
+          "113052fc-b48a-41a5-a264-bd4894f416a4"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 460,
+      "model_ms": 2602,
+      "total_ms": 3062,
+      "cost_usd": 0.0129892,
+      "usage": {
+        "input_tokens": 42193,
+        "cached_input_tokens": 38272,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 132,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 42325
+      },
+      "log": "/home/mez/.codex/sessions/2026/11/04/rollout-2026-11-04T01-49-31-01a1a43f-4369-74a2-a2ed-ddc3de1d9c45.jsonl"
+    },
+    {
+      "run": "r3-created-haiku-low",
+      "config": "haiku-low",
+      "scenario": "created",
+      "rep": 3,
+      "expected": [
+        "created",
+        "5216595c-c8a5-4747-9c21-9271d5ffe8b8",
+        "bf982da6-b721-42d9-b23a-f0646f52abd0"
+      ],
+      "label": "Haiku 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "created",
+          "5216595c-c8a5-4747-9c21-9271d5ffe8b8",
+          "bf982da6-b721-42d9-b23a-f0646f52abd0"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 340,
+      "model_ms": 5744,
+      "total_ms": 6084,
+      "cost_usd": 0.005084699999999999,
+      "usage": {
+        "input": 4,
+        "cache_write": 20790,
+        "cache_read": 75480,
+        "output": 343
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/f54f11f3-b1ad-4ab8-9eb5-98dacbc160a7.jsonl"
+    },
+    {
+      "run": "r3-created-opus-low",
+      "config": "opus-low",
+      "scenario": "created",
+      "rep": 3,
+      "expected": [
+        "created",
+        "f468383a-0e84-4cab-8cfc-f38ba6ff65c9",
+        "ad882ce6-1a48-4eae-b112-b83860c771f7"
+      ],
+      "label": "Opus 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "created",
+          "f468383a-0e84-4cab-8cfc-f38ba6ff65c9",
+          "ad882ce6-1a48-4eae-b112-b83860c771f7"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 428,
+      "model_ms": 8703,
+      "total_ms": 9131,
+      "cost_usd": 0.186846,
+      "usage": {
+        "input": 4,
+        "cache_write": 20867,
+        "cache_read": 74870,
+        "output": 246
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/4abe89b8-4408-444b-ba95-bab3621adb5f.jsonl"
+    },
+    {
+      "run": "r3-created-sonnet-low",
+      "config": "sonnet-low",
+      "scenario": "created",
+      "rep": 3,
+      "expected": [
+        "created",
+        "26956a38-fbe6-4e19-b075-86610da3c6f4",
+        "47fb1439-6fdd-4744-b544-6c5668ec1b82"
+      ],
+      "label": "Sonnet 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "created",
+          "26956a38-fbe6-4e19-b075-86610da3c6f4",
+          "47fb1439-6fdd-4744-b544-6c5668ec1b82"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 342,
+      "model_ms": 6377,
+      "total_ms": 6719,
+      "cost_usd": 0.0926336,
+      "usage": {
+        "input": 4,
+        "cache_write": 20767,
+        "cache_read": 73876,
+        "output": 217
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/bbe5f712-826a-4189-abc7-bbc6e0cb0b45.jsonl"
+    },
+    {
+      "run": "r3-created-terra-low",
+      "config": "terra-low",
+      "scenario": "created",
+      "rep": 3,
+      "expected": [
+        "created",
+        "abbb1ea0-714f-4036-ac85-1e7442bd8bba",
+        "f7dfc871-7d54-4597-a261-64c7d13151f9"
+      ],
+      "label": "GPT-6.1 Terra, low",
+      "provider": "codex",
+      "calls": [
+        [
+          "created",
+          "abbb1ea0-714f-4036-ac85-1e7442bd8bba",
+          "f7dfc871-7d54-4597-a261-64c7d13151f9"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 482,
+      "model_ms": 4687,
+      "total_ms": 5169,
+      "cost_usd": 0.0263344,
+      "usage": {
+        "input_tokens": 42237,
+        "cached_input_tokens": 17408,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 127,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 42364
+      },
+      "log": "/home/mez/.codex/sessions/2026/11/04/rollout-2026-11-04T01-50-04-01a1a43f-c368-7002-a699-76912e2eef53.jsonl"
+    },
+    {
+      "run": "r3-created-terra-low-priority",
+      "config": "terra-low-priority",
+      "scenario": "created",
+      "rep": 3,
+      "expected": [
+        "created",
+        "f80dfc16-7050-43c7-8928-093d36ccdf1d",
+        "5478a214-131b-4c44-8e96-d2268535026b"
+      ],
+      "label": "GPT-6.1 Terra, low, priority",
+      "provider": "codex",
+      "calls": [
+        [
+          "created",
+          "f80dfc16-7050-43c7-8928-093d36ccdf1d",
+          "5478a214-131b-4c44-8e96-d2268535026b"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 509,
+      "model_ms": 2505,
+      "total_ms": 3014,
+      "cost_usd": 0.0461904,
+      "usage": {
+        "input_tokens": 42246,
+        "cached_input_tokens": 20864,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 134,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 42380
+      },
+      "log": "/home/mez/.codex/sessions/2026/11/04/rollout-2026-11-04T01-50-08-01a1a43f-d19a-7c32-9b86-dce710b0330f.jsonl"
+    },
+    {
+      "run": "r3-prompted-haiku-low",
+      "config": "haiku-low",
+      "scenario": "prompted",
+      "rep": 3,
+      "expected": [
+        "prompted",
+        "c6209962-c584-4f42-9d92-915d059f7e1d",
+        "d9bed5dc-a8ed-447c-971b-872cf8bee081"
+      ],
+      "label": "Haiku 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "prompted",
+          "c6209962-c584-4f42-9d92-915d059f7e1d",
+          "d9bed5dc-a8ed-447c-971b-872cf8bee081"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 1057,
+      "model_ms": 6413,
+      "total_ms": 7470,
+      "cost_usd": 0.00507341,
+      "usage": {
+        "input": 4,
+        "cache_write": 20784,
+        "cache_read": 75471,
+        "output": 323
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/2a0cf8d8-fe82-4929-9baf-652a8678f54c.jsonl"
+    },
+    {
+      "run": "r3-prompted-opus-low",
+      "config": "opus-low",
+      "scenario": "prompted",
+      "rep": 3,
+      "expected": [
+        "prompted",
+        "89cea422-32d3-4980-b8b3-d093c3e20b09",
+        "1b254db9-62b4-41dd-a537-c7a50cd0abcf"
+      ],
+      "label": "Opus 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "prompted",
+          "89cea422-32d3-4980-b8b3-d093c3e20b09",
+          "1b254db9-62b4-41dd-a537-c7a50cd0abcf"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 621,
+      "model_ms": 8658,
+      "total_ms": 9279,
+      "cost_usd": 0.18795099999999998,
+      "usage": {
+        "input": 4,
+        "cache_write": 20840,
+        "cache_read": 77875,
+        "output": 282
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/70c03f97-7537-4b52-a44c-03fc227b6c45.jsonl"
+    },
+    {
+      "run": "r3-prompted-sonnet-low",
+      "config": "sonnet-low",
+      "scenario": "prompted",
+      "rep": 3,
+      "expected": [
+        "prompted",
+        "1fef8327-50b5-434b-822d-79df845ed668",
+        "bea525f8-6279-4f88-a880-c98911ffbe8d"
+      ],
+      "label": "Sonnet 5.5, low",
+      "provider": "claudeAgent",
+      "calls": [
+        [
+          "prompted",
+          "1fef8327-50b5-434b-822d-79df845ed668",
+          "bea525f8-6279-4f88-a880-c98911ffbe8d"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 465,
+      "model_ms": 6761,
+      "total_ms": 7226,
+      "cost_usd": 0.09305359999999999,
+      "usage": {
+        "input": 4,
+        "cache_write": 20745,
+        "cache_read": 73856,
+        "output": 268
+      },
+      "log": "/home/mez/.claude/projects/-home-mez--t3-projects-t3-code-to-linear/5651b202-4dee-4e4e-9259-711094e36d6c.jsonl"
+    },
+    {
+      "run": "r3-prompted-terra-low",
+      "config": "terra-low",
+      "scenario": "prompted",
+      "rep": 3,
+      "expected": [
+        "prompted",
+        "e1761fb2-9062-429b-a46f-7f47266c84a1",
+        "9e23f580-bc5a-4f28-9adc-ed5e05dae4e4"
+      ],
+      "label": "GPT-6.1 Terra, low",
+      "provider": "codex",
+      "calls": [
+        [
+          "prompted",
+          "e1761fb2-9062-429b-a46f-7f47266c84a1",
+          "9e23f580-bc5a-4f28-9adc-ed5e05dae4e4"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 469,
+      "model_ms": 4403,
+      "total_ms": 4872,
+      "cost_usd": 0.006435999999999999,
+      "usage": {
+        "input_tokens": 42226,
+        "cached_input_tokens": 38400,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 138,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 42364
+      },
+      "log": "/home/mez/.codex/sessions/2026/11/04/rollout-2026-11-04T01-50-41-01a1a440-5395-7fa0-b867-24ed24b6a9fc.jsonl"
+    },
+    {
+      "run": "r3-prompted-terra-low-priority",
+      "config": "terra-low-priority",
+      "scenario": "prompted",
+      "rep": 3,
+      "expected": [
+        "prompted",
+        "32a31e86-5248-4f31-ab6d-60a028e44ef3",
+        "5e97dc45-b1d1-436a-9103-d877274868c3"
+      ],
+      "label": "GPT-6.1 Terra, low, priority",
+      "provider": "codex",
+      "calls": [
+        [
+          "prompted",
+          "32a31e86-5248-4f31-ab6d-60a028e44ef3",
+          "5e97dc45-b1d1-436a-9103-d877274868c3"
+        ]
+      ],
+      "correct": true,
+      "tool_calls": 1,
+      "quality": 1.0,
+      "boot_ms": 609,
+      "model_ms": 3722,
+      "total_ms": 4331,
+      "cost_usd": 0.052740800000000004,
+      "usage": {
+        "input_tokens": 42223,
+        "cached_input_tokens": 17408,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 137,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 42360
+      },
+      "log": "/home/mez/.codex/sessions/2026/11/04/rollout-2026-11-04T01-50-45-01a1a440-6171-79a1-8d0c-8ce538ef1092.jsonl"
+    }
+  ],
+  "summary": {
+    "terra-low": {
+      "label": "GPT-6.1 Terra, low",
+      "provider": "codex",
+      "runs": 6,
+      "quality": 1.0,
+      "total_ms_p50": 5020.5,
+      "total_ms_min": 4605,
+      "total_ms_max": 6252,
+      "boot_ms_p50": 587.5,
+      "model_ms_p50": 4506.5,
+      "cost_usd_mean": 0.014906566666666666,
+      "under_10s": 6
+    },
+    "terra-low-priority": {
+      "label": "GPT-6.1 Terra, low, priority",
+      "provider": "codex",
+      "runs": 6,
+      "quality": 1.0,
+      "total_ms_p50": 3162.0,
+      "total_ms_min": 2915,
+      "total_ms_max": 4331,
+      "boot_ms_p50": 513.5,
+      "model_ms_p50": 2669.5,
+      "cost_usd_mean": 0.036217733333333335,
+      "under_10s": 6
+    },
+    "haiku-low": {
+      "label": "Haiku 5.5, low",
+      "provider": "claudeAgent",
+      "runs": 6,
+      "quality": 1.0,
+      "total_ms_p50": 6577.5,
+      "total_ms_min": 5947,
+      "total_ms_max": 8956,
+      "boot_ms_p50": 364.0,
+      "model_ms_p50": 6078.5,
+      "cost_usd_mean": 0.0050773166666666664,
+      "under_10s": 6
+    },
+    "sonnet-low": {
+      "label": "Sonnet 5.5, low",
+      "provider": "claudeAgent",
+      "runs": 6,
+      "quality": 1.0,
+      "total_ms_p50": 6694.0,
+      "total_ms_min": 6484,
+      "total_ms_max": 7226,
+      "boot_ms_p50": 361.0,
+      "model_ms_p50": 6345.0,
+      "cost_usd_mean": 0.09270215,
+      "under_10s": 6
+    },
+    "opus-low": {
+      "label": "Opus 5.5, low",
+      "provider": "claudeAgent",
+      "runs": 6,
+      "quality": 1.0,
+      "total_ms_p50": 9205.0,
+      "total_ms_min": 7770,
+      "total_ms_max": 10272,
+      "boot_ms_p50": 430.0,
+      "model_ms_p50": 8680.5,
+      "cost_usd_mean": 0.1873687,
+      "under_10s": 5
+    }
+  }
+}
